@@ -2,7 +2,7 @@
   <div class="preloader">
     <div class="preloader__content">
       <div class="preloader__animation"></div>
-      <div class="preloader__percent">0%</div>
+      <!-- <div class="preloader__percent">0%</div> -->
     </div>
   </div>
 </template>
@@ -10,6 +10,19 @@
 <script>
 export default {
   name: 'Preloader',
+  // data() {
+  //   return {
+  //     loader: false,
+  //   };
+  // },
+  // methods: {
+  //   start() {
+  //     this.loader = true;
+  //   },
+  //   done() {
+  //     this.loader = false;
+  //   },
+  // },
 };
 </script>
 

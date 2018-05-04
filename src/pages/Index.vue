@@ -4,19 +4,24 @@
     <custom-button class="welcome-page__button">
       {{ flag ? "Вернуться" : "авторизоваться" }}
     </custom-button>
-    <div class="flip-container">
-    </div>
+    <white-frame class="flip-container">
+      <v-welcome></v-welcome>
+    </white-frame>
   </div>
 </template>
 
 <script>
-import CustomButton from '@/components/Custom-Button';
+import WhiteFrame from '@/components/BaseWhiteFrame';
+import CustomButton from '@/components/BaseButton';
+import VWelcome from '@/components/VWelcome';
 
 export default {
   name: 'Welcome-Page',
 
   components: {
     CustomButton,
+    WhiteFrame,
+    VWelcome,
   },
 
   data() {
@@ -48,8 +53,5 @@ export default {
 .flip-container {
   width: 375px;
   min-height: 360px;
-
-  border-radius: 15px;
-  background-color: rgba(#ffffff, 0.7);
 }
 </style>

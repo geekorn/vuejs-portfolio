@@ -1,14 +1,14 @@
 <template>
   <div id="app">
     <transition name="fade">
-      <Preloader v-if="loader"></Preloader>
+      <pre-loader v-if="loader"></pre-loader>
     </transition>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Preloader from './components/Preloader';
+import PreLoader from './components/ThePreloader';
 
 export default {
   name: 'App',
@@ -20,13 +20,13 @@ export default {
   },
 
   mounted() {
-    // setTimeout(() => {
-    //   this.loader = false;
-    // }, 500);
+    setTimeout(() => {
+      this.loader = false;
+    }, 1500);
   },
 
   components: {
-    Preloader,
+    PreLoader,
   },
 };
 </script>
@@ -47,7 +47,7 @@ export default {
 }
 
 .fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
+  transition: opacity 0.7s;
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active до версии 2.1.8 */ {
   opacity: 0;
